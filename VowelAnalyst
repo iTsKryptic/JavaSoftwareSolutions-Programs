@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class VowelAnalyst
+{
+
+	public static void main (String[]args)
+
+	{
+		String stringEntered;
+		int a=0, e=0, i=0, o=0, u=0, other=0;
+		char vowels;
+
+		Scanner scan = new Scanner (System.in);
+
+		System.out.println("Enter a string: ");
+		stringEntered = scan.nextLine();
+
+		for (int count=0; count < stringEntered.length(); count++)
+		{
+			vowels = stringEntered.charAt(count);
+
+			switch (vowels)
+			{
+			case 'a':
+				a++;
+				break;
+			case 'e':
+				e++;
+				break;
+			case 'i':
+				i++;
+				break;
+			case 'o':
+				o++;
+				break;
+			case 'u':
+				u++;
+				break;
+			default:
+				other++;
+			}
+
+		}
+		System.out.println("Number of vowels in string: " + (a+e+i+o+u));
+		System.out.println ("a: " + a); 
+		System.out.println ("e: " + e);
+		System.out.println ("i: " + i);
+		System.out.println ("o: " + o);
+		System.out.println ("u: " + u);
+		System.out.println ("other " + other);
+	}
+}
+
