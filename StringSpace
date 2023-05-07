@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class PrintingString
+{
+	public static void main(String[] args)
+	{
+		String text;
+		int length;
+		char current;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter a string of letters: ");
+		text = scan.nextLine();
+		length = text.length();
+
+		for (int count=0; count < length; count++)
+		{
+			current = text.charAt(count);
+			System.out.println(current);
+		}
+
+	}
+}
