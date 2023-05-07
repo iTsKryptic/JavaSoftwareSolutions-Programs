@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SumOfIntegers
+{
+	public static void main(String[] args)
+	{
+		int value = 0;
+		int totalSum   = 0;
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("Enter a number: ");
+		value = scan.nextInt();
+
+		System.out.println();
+		if (value < 2)
+		{
+		System.out.println("The input value can not be less than 2 ");
+			return;
+		}
+		
+		System.out.println("the sum of all even integers between 2 and the input value: " + value + " (inclusive) are:");
+		for (int count = 1; count <= value; count++)
+		{
+			// Only add if even
+
+			if((count % 2) == 0)
+			{
+				totalSum+=count;
+				System.out.println(count);
+			}
+		}
+		System.out.println("The sum is " + totalSum);
+	}
+}
